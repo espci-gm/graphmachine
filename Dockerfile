@@ -17,4 +17,5 @@ RUN apt-get update && apt-get install -y \
     pip install --user monal && \
     pip install --user chem_gm && \
     rm -rf /var/lib/apt/lists/*
+    WORKDIR /root/.local/lib/python2.7/site-packages/chem_gm/api
 
