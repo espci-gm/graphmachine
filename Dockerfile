@@ -23,3 +23,4 @@ WORKDIR /root/.local/lib/python2.7/site-packages/chem_gm/api
 ENTRYPOINT ["python"]
 CMD ["gm_apidemo.py"]
 
+
