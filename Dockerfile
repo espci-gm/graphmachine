@@ -16,9 +16,10 @@ RUN apt-get install -y \
     pip install scipy && \
     apt-get install -y python-matplotlib \
     python-tk && \
-    pip install monal && \
-    pip install chem_gm && \
+    pip install --user monal && \
+    pip install __user chem_gm && \
     rm -rf /var/lib/apt/lists/*
+#WORKDIR /usr/local/lib/python2.7/dist-packages/chem_gm/api
 WORKDIR /root/.local/lib/python2.7/site-packages/chem_gm/api
 #ENTRYPOINT ["python"]
 #CMD ["gm_apidemo.py"]
