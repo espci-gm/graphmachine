@@ -1,5 +1,5 @@
 #!/bin/bash
-FROM ubuntu
+FROM cents
 RUN apt-get update && apt-get install -qy x11-apps
 RUN apt-get install -y \
     python \
