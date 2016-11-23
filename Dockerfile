@@ -1,6 +1,7 @@
 #!/bin/bash
 FROM ubuntu:15.04
 RUN apt-get update \
+    && apt-get install -y x11vnc xvfb
     && apt-get install -y \
     python \
     python-dev \
@@ -17,8 +18,10 @@ RUN apt-get update \
 RUN pip install --user monal
 RUN pip install --user chem_gm
 RUN rm -rf /var/lib/apt/lists/*
+# Setup a password
+RUN x11vnc -storepasswd 1234 ~/.vnc/passwd
 WORKDIR /root/.local/lib/python2.7/site-packages/chem_gm/api
 #ENTRYPOINT ["python"]
-#CMD ["gm_apidemo.py"]
+#CMD ["-m", "gm_apidemo"]
 
 
