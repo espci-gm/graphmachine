@@ -20,8 +20,9 @@ RUN apt-get update \
 RUN pip install --user monal
 RUN pip install --user chem_gm
 RUN rm -rf /var/lib/apt/lists/*
+RUN mkdir ~/.vnc
 # Setup a password
-#RUN x11vnc -storepasswd 1234 ~/.vnc/passwd
+RUN x11vnc -storepasswd 1234 ~/.vnc/passwd
 WORKDIR /root/.local/lib/python2.7/site-packages/chem_gm/api
 #ENTRYPOINT ["python"]
 #CMD ["-m", "gm_apidemo"]
