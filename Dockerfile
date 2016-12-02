@@ -14,7 +14,7 @@ RUN apt-get update \
     --no-install-recommends  \
     && pip install --upgrade pip \
     && apt-get install -y build-essential \
-    --no-install-recommends \
+    jeanlucp/graphmachine_demo:bash--no-install-recommends \
     libatlas-base-dev \
     gfortran 
     #python-matplotlib
@@ -26,6 +26,6 @@ RUN rm -rf /var/lib/apt/lists/*
 #RUN x11vnc -storepasswd 1234 ~/.vnc/passwd
 WORKDIR /root/.local/lib/python2.7/site-packages/chem_gm/api
 ENTRYPOINT ["python"]
-CMD ["-m", "gm_apidemo", "Base321E_chem.xlsx", "-aall", "-sr", "DATA", "-st", "TEST49", "-I", "24", "-CI1_isomers0_chirals1_qs0", "--seed", "1947", "-v5", "-rd", "2", "-b"]
+CMD ["-m", "gm_apidemo", "Base321E_chem.xlsx", "-aall", "-sr", "DATA", "-st", "TEST49", "-I", "24", "-H", "2", "-CI1_isomers0_chirals1_qs0", "--seed", "1947", "-v5", "-rd", "2", "-b"]
 
 
