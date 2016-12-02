@@ -14,7 +14,7 @@ RUN apt-get update \
     --no-install-recommends  \
     && pip install --upgrade pip \
     && apt-get install -y build-essential \
-    jeanlucp/graphmachine_demo:bash--no-install-recommends \
+    --no-install-recommends \
     libatlas-base-dev \
     gfortran 
     #python-matplotlib
