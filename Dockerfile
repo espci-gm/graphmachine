@@ -26,6 +26,6 @@ RUN rm -rf /var/lib/apt/lists/*
 #RUN x11vnc -storepasswd 1234 ~/.vnc/passwd
 WORKDIR /root/.local/lib/python2.7/site-packages/chem_gm/api
 ENTRYPOINT ["python"]
-CMD ["-m", "gm_apidemo", "Base321E_chem.xlsx", "-aall", "-sr", "DATA", "-st", "TEST49", "-I", "24", "-H", "-4", "-CI1_isomers0_chirals1_qs0", "--seed", "1947", "-v5", "-rd", "2", "-b", "-R1"]
+CMD ["-m", "gm_apidemo", "Base321E_chem.xlsx", "-aall", "-sr", "DATA", "-st", "TEST49", "-I", "24", "-H", "-4", "-CI1_isomers0_chirals1_qs0", "--seed", "1947", "-v5", "-rd", "-1", "-b", "-R1"]
 
 
