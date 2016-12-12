@@ -27,7 +27,7 @@ ADD $DATAFILE ~/docker/data/
 ADD $TESTFILE ~/docker/data/
 
 WORKDIR /root/.local/lib/python2.7/site-packages/chem_gm/api
-#ENTRYPOINT ["python"]
+
 CMD python gm_apidemo.py $DATAFILE $TESTFILE -sr $DATARANGE -st $TESTRANGE -I $INIT -H $HIDDEN -C $CONFIGSTR -s $SEED -y $YES -v5 -b -R
 
 
