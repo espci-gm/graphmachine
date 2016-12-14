@@ -1,5 +1,5 @@
 #!/bin/bash
-FROM jeanlucp/gm-base:latest
+FROM espci-gm/gm-base:latest
 MAINTAINER Jean-Luc PLOIX
 
 ARG DATAFILE=Base321E_chem.xlsx
